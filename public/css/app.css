@@ -1,0 +1,10 @@
+.inline {
+    display: inline;
+}
+
+.img-placeholder {
+    background-color: lightgray;
+    border-radius: 100%;
+    width: 80%;
+    aspect-ratio: 1;
+}
