@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Print`d - вход')
+@section('title', 'CopyStar - товары')
 @section('body')
     <div class="container">
         <h1>Товары</h1>

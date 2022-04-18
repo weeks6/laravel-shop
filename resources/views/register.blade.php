@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('title', 'Print`d - регистрация')
+@section('title', 'CopyStar - регистрация')
 @section('body')
     <div class="container">
         <h1 class="mb-4">Регистрация</h1>

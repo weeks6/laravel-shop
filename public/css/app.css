@@ -3,8 +3,15 @@
 }
 
 .img-placeholder {
-    background-color: lightgray;
-    border-radius: 100%;
+    background-image: url(/images/placeholder.jpg?83aeae157200b2f9118e9e58015910ca);
     width: 80%;
     aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.no-link {
+    text-decoration: inherit;
+    color: inherit
 }

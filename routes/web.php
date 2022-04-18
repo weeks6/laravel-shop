@@ -20,8 +20,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $products = Product::all();
+Route::get('/', function (Request $request) {
+    $order = $request->query('order');
+    if ($order) {
+        if ($order == 'price') {
+            $products = Product::orderBy('price_ru', 'desc')->get();
+        } elseif ($order == 'price:asc') {
+            $products = Product::orderBy('price_ru', 'asc')->get();
+        }
+    } else {
+        $products = Product::all();
+    }
+
 
     return view('home', ['products' => $products]);
 })->name('home');
@@ -64,3 +74,11 @@ Route::get('/admin/products', function () {
 Route::get('/admin/orders', function () {
     return view('admin/orders');
 })->name('admin_orders');
+
+Route::get('/product/{product}', function ($commentId) {
+    $product = Product::where('id', $commentId)->first();
+
+    return view('product', ['product' => $product]);
+});
+
+Route::view('/about', 'about')->name('about');
